@@ -36,10 +36,14 @@ LIBS += C:\Anaconda2\libs\python27.lib
 # - Add anaconda to user environment variable "PYTHONPATH"
 
 #Required lines in each python files to be read:
-# - import os (?)
-# - import sys
-# - sys.path.append('pathToPythonFileFolder')
+# - import os (??)
+# - import sys (??)
+# - sys.path.append('pathToPythonFileFolder') (??)
 #   ex: 'H:/Matthieu/Perso/Programmation/Qt/test3'
+# - Importing complex modules such as numpy is quite complex and make the app crash if the python program that uses numpy is run more than once.
+#   To avoid this Py_Finalize() must be called only once in the entire lifetime of the program
+#   https://stackoverflow.com/questions/7676314/py-initialize-py-finalize-not-working-twice-with-numpy
+#   https://mail.scipy.org/pipermail/numpy-discussion/2009-March/040849.html
 
 #Information:
 # - When pressing "Run program" button, the chosen file path is put into the python argument argv[0] so that the program can find related python files (in case of multiple imports)
