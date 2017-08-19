@@ -2,9 +2,12 @@
 
 PythonConsole::PythonConsole(QWidget *parent) : QPlainTextEdit(parent)
 {
+
+    //Set font to "console style"
     QFont consoleFont("consolas", 8, QFont::Medium, false);
     this->setFont(consoleFont);
 
+    //Set maximum sroll limit for the console
     this->setMaximumBlockCount(10000);
 
     //Context menu actions
@@ -38,6 +41,8 @@ PythonConsole::~PythonConsole()
 
 void PythonConsole::contextMenuEvent(QContextMenuEvent *event)
 {
+
+    //Get existing (default) context menu
     QMenu* menu = createStandardContextMenu();
 
     //Create and insert "Clear" action (+ separator) at the head of the existing context menu
@@ -50,6 +55,7 @@ void PythonConsole::contextMenuEvent(QContextMenuEvent *event)
     colorTheme->addAction(this->_lightTheme);
     colorTheme->addAction(this->_darkTheme);
 
+    //Open context menu
     menu->exec(event->globalPos());
     delete menu;
 }
