@@ -107,7 +107,6 @@ void MainWindow::LaunchPythonProgram()
 
     //Open python interpreter
     Py_Initialize();
-    qDebug() << "*** Starting python interpreter ***";
 
 
     //Run python program header to redirect standard output and error
@@ -158,8 +157,6 @@ sys.stderr = catchOutErr\n\
     this->_pythonConsole->setTextCursor(c);
 
 
-    //Close python interpreter
-    Py_Finalize();
-    qDebug() << "*** Closing python interpreter ***";
+    //Note: Closing python interpreter is done only once in main.cpp (to avoid problems with multiple import of complex python modules such as numpy)
 
 }
