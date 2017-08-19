@@ -1,1 +1,8 @@
-# Python_Interpreter_QtCpp
+## Python Interpreter inside C++/Qt application
+## Author : Matthieu Kieffer
+
+text...
+
+## Introduction
+
+text...
