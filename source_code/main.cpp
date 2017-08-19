@@ -1,5 +1,5 @@
-#include <cmath>
-#include <Python.h>
+//#include <cmath>
+//#include <Python.h>
 #include "mainwindow.h"
 #include <QApplication>
 
@@ -9,6 +9,9 @@ int main(int argc, char *argv[])
     MainWindow w;
 
     w.show();
+
+    //Close python interpreter when exiting the application
+    Py_Finalize();
 
     return a.exec();
 }
