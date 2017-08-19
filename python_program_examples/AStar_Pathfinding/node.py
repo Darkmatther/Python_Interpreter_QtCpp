@@ -1,4 +1,5 @@
-
+# Author: hawkerpl
+# https://gist.github.com/hawkerpl/b20439f449d607cfd8b5
 
 __author__ = 'hawker'
 import math
