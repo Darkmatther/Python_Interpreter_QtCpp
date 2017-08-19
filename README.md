@@ -1,4 +1,4 @@
-## Python Interpreter inside C++/Qt application
+# Python Interpreter inside C++/Qt application
 ## Author : Matthieu Kieffer
 
 text...
