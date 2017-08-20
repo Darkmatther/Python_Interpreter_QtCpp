@@ -1,20 +1,16 @@
-# Author: abekohen
+# Author: abekohen  (slightly adapted by Matthieu Kieffer to be ran with command line arguments)
 # https://gist.github.com/abekohen/9955561
 
-# Rock-paper-scissors-lizard-Spock
-# COURSERA Python simple project
+"""
+    Description:
+    A simple rock/paper/scissors/lizard/spock game. 
+	Enter your choice as a command line argument. Example: python RockPaperScissorsLizardSpock.py scissors
+"""
 
-# equate the strings
-# "rock", "paper", "scissors", "lizard", "Spock" to numbers:
-#
-# 0 - rock
-# 1 - Spock
-# 2 - paper
-# 3 - lizard
-# 4 - scissors
-
-# random.randrange() so we need to import random
+import sys
 import random
+
+items = ["rock", "paper", "scissors", "lizard", "spock"]
 
 def name_to_number(name):
     
@@ -35,6 +31,7 @@ def number_to_name(number):
     if (number == 4): return "scissors"
     return "Bad number entered"
 
+	
 def rpsls(player_choice): 
     
     # print a blank line to separate consecutive games
@@ -67,10 +64,28 @@ def rpsls(player_choice):
     if (winner == "Tie"): print "Player and computer tie!"
     else: print winner, "wins!"    
 
-    
-# test code 
-rpsls("rock")
-rpsls("Spock")
-rpsls("paper")
-rpsls("lizard")
-rpsls("scissors")
+
+if __name__ == "__main__":
+
+    choices = "\
+Possible choices are:\n\
+- rock\n\
+- paper\n\
+- scissors\n\
+- lizard\n\
+- spock\n\
+Example: rock lizard paper paper\n"
+
+    #Check if the user has entered at least one command line argument
+    if(len(sys.argv) < 2):
+        print "\nERROR: The game couldn't be started.\nPlease enter your choice (or a sequence of choices) as a command line argument, and then re-run the program.\n", choices
+
+    #Play the game for each command line input from the user
+    for i, arg in enumerate(sys.argv[1:]):
+        if arg in items:
+            rpsls(arg)
+        else:
+            print "\nERROR: there is a mistake in the input argument number", str(i), ":", arg,"\n", choices
+            break
+
+
