@@ -110,7 +110,7 @@ void MainWindow::LaunchPythonProgram()
 
 
     //Run python program header to redirect standard output and error
-    std::string stdOutErr =
+    QString stdOutErr =
 "import sys\n\
 class CatchOutErr:\n\
     def __init__(self):\n\
@@ -121,7 +121,7 @@ catchOutErr = CatchOutErr()\n\
 sys.stdout = catchOutErr\n\
 sys.stderr = catchOutErr\n\
 ";
-    PyRun_SimpleString(stdOutErr.c_str());
+    PyRun_SimpleString(this->convertStringToChar(stdOutErr));
 
 
     //Set input arguments to python interpreter
@@ -134,6 +134,13 @@ sys.stderr = catchOutErr\n\
     file.open(QIODevice::ReadOnly |QIODevice::Text);
     QTextStream fileStream(&file);
     QString fileContent(fileStream.readAll());
+
+
+    //Change current working directory in the python program
+    QFileInfo fileInfo(file);
+    QString changePath = "import os\nos.chdir('" + fileInfo.absolutePath() + "')";
+    qDebug() << "changePath = " << changePath;
+    PyRun_SimpleString(this->convertStringToChar(changePath));
 
 
     //Run python program
