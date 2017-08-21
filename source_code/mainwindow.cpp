@@ -19,6 +19,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    
+    //Set window title and icon
+    this->setWindowTitle("Python in a C++/Qt window");
+    this->setWindowIcon( QIcon("./images/icon_python.ico") );
 
     //Insert python console
     this->_pythonConsole = new PythonConsole();
