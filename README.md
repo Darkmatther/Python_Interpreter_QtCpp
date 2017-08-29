@@ -13,7 +13,7 @@ I have initially written this program for two reasons:
 After some research I figured out that staying with pure python code and using the pyQt library for the window application would be a better choice than wrapping, but I was still interested into finishing this C++/Qt project, for self-learning satisfaction but also to provide a functional program to people who could be interested in such a C++/python embedding functionality into their own programs.
 
 ### Details about the implementation
-Python wrapping functionalities have been **implemented** using the Very High Level Layer of the Python/C API. Here are some useful links:
+Python wrapping functionalities have been <strong>implemented</strong> using the Very High Level Layer of the Python/C API. Here are some useful links:
 https://docs.python.org/2/c-api/index.html
 https://docs.python.org/2/c-api/veryhigh.html
 https://docs.python.org/2/extending/embedding.html
