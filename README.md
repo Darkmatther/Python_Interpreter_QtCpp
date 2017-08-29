@@ -14,7 +14,7 @@ After some research I figured out that staying with pure python code and using t
 
 ### Details about the implementation
 Python wrapping functionalities have been <strong>implemented</strong> using the Very High Level Layer of the Python/C API. Here are some useful links:<br/>
-https://docs.python.org/2/c-api/index.html
-https://docs.python.org/2/c-api/veryhigh.html
+https://docs.python.org/2/c-api/index.html<br/>
+https://docs.python.org/2/c-api/veryhigh.html<br/>
 https://docs.python.org/2/extending/embedding.html
 
