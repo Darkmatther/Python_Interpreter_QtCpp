@@ -3,13 +3,11 @@
 
 ### Description
 This little project shows how to execute external python programs/scripts from inside a C++/Qt widget application. 
-Elements from the source code (and more specifically the method MainWindow::launchPythonProgram()) could be reimplemented in another Qt application to enable running external python programs in an easy/fast way, for example reading/writing into files or launch a complex algorithm with many dependencies (e.g. object-oriented python code with many includes) that is not practical to code in C++.<br/><br/>
+Elements from the source code (and more specifically the method MainWindow::launchPythonProgram()) could be reimplemented in another Qt application to enable running external python programs in an easy/fast way, for example reading/writing into files or launch a complex algorithm with many dependencies (e.g. object-oriented python code with many includes) that is not practical to code in C++. <img src="https://user-images.githubusercontent.com/25090342/29821873-b9be613c-8cc9-11e7-91f8-e8f8e50e5acd.png" alt="Smiley face" align="middle"> <br/><br/>
 
-<div style="text-align:center" markdown="1">
 
 ![Main window of the application](https://user-images.githubusercontent.com/25090342/29821873-b9be613c-8cc9-11e7-91f8-e8f8e50e5acd.png "Main window of the application")
 
-</div>
 
 ### Motivations
 I have initially written this program for two reasons:
