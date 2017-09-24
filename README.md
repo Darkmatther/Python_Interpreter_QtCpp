@@ -23,6 +23,8 @@ https://docs.python.org/2/extending/embedding.html
 To make the application run properly, a working version of python2.7 must be installed onto your computer, with PATH and PYTHONPATH environment variables set correctly.
 If running python script that include libraries such as numpy and scikit-learn, I recommand installing Anaconda instead. 
 
+...more details coming soon...
+
 ### Limitations
 - The program is not able to read python files line by line with dynamic output/error printing, and is not able to interact with the user through the console. Instead, the program simply runs the whole python program and then prints the output/error after the end of the program execution.<br/>
 In consequence, it is only possible to run python programs (single file or with multiple file inclusions) that does not interact with the user at run time.<br/>
