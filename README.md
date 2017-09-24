@@ -28,7 +28,7 @@ If running python script that include libraries such as numpy and scikit-learn, 
 ### Limitations
 - The program is not able to read python files line by line with dynamic output/error printing, and is not able to interact with the user through the console. Instead, the program simply runs the whole python program and then prints the output/error after the end of the program execution.<br/>
 In consequence, it is only possible to run python programs (single file or with multiple file inclusions) that does not interact with the user at run time.<br/>
-Interaction with the user would be more complex to implement. Here is a link that could help you if you get interrested by coding such a feature: http://www.qtcentre.org/threads/22664-How-to-display-the-output-of-a-process-in-a-TextEdit-widget-in-real-time
+Interaction with the user would be more complex to implement and requires to enter deeply in the Python/C API documentation.
 <br/><br/>
 - For an unknown reason, the program doesn't work with python module "panda" (apparently this is a common issue with the Python/C API)
 <br/><br/>
