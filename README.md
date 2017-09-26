@@ -35,6 +35,3 @@ Interaction with the user would be more complex to implement and requires to ent
 - The current version of the program doesn't seem to work with matplotlib. This may be due to the 32bits version of MINGW.
 Qt creator is shipped with MINGW 32Bit, not 64Bit, but python module matplotlib apparently requires 64bits to work in that specific configuration (I've already encountered a similar problem when using python2.7 from an Anaconda 32bits distribution in a Visual Studio project, and matplotlib was suddenly working when changing to the 64bits Anaconda distribution)
 --> Possible solution to the problem: install Qt Creator with MINGW-w64 (need then to be configured by hand)
-
-
-(coming soon)
